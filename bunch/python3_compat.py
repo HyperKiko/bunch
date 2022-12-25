@@ -13,7 +13,7 @@ else:
         return codecs.unicode_escape_decode(string)[0]
 
 # dict.iteritems(), dict.iterkeys() is also incompatible
-if _IS_PYTHON_3:
+if not _IS_PYTHON_3:
     iteritems = dict.items
     iterkeys  = dict.keys
 else:
